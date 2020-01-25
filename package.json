@@ -19,5 +19,11 @@
   "bugs": {
     "url": "https://github.com/yajamon/result.ts/issues"
   },
-  "homepage": "https://github.com/yajamon/result.ts#readme"
+  "homepage": "https://github.com/yajamon/result.ts#readme",
+  "devDependencies": {
+    "jest": "^25.1.0"
+  },
+  "dependencies": {
+    "typescript": "^3.7.5"
+  }
 }
