@@ -1,7 +1,7 @@
 import { Ok } from "./main";
 
 describe("hello", () => {
-    it("world", () => {
-        expect(true);
-    });
+  it("world", () => {
+    expect(true);
+  });
 });

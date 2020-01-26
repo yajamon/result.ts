@@ -1,7 +1,7 @@
 export type Ok<T> = {
-    value: T;
+  value: T;
 };
 
 export type Err<E> = {
-    error: E;
+  error: E;
 }
