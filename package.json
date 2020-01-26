@@ -2,8 +2,9 @@
   "name": "@yajamon/result.ts",
   "version": "0.1.0",
   "description": "Type definitions and simple functions inspired by Rust's Result.",
-  "main": "index.js",
+  "main": "lib/main.js",
   "scripts": {
+    "build": "tsc",
     "test": "jest"
   },
   "repository": {

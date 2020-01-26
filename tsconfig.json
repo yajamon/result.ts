@@ -4,7 +4,9 @@
     "module": "ESNext",
     "declaration": true,
     "declarationMap": true,
-    "sourceMap": true,
+
+    "rootDir": "src",
+    "outDir": "lib",
 
     "strict": true,
     "noFallthroughCasesInSwitch": true,
@@ -13,6 +15,12 @@
     "inlineSourceMap": true,
     "inlineSources": true,
 
+    "types": [
+    ],
+
     "forceConsistentCasingInFileNames": true
-  }
+  },
+  "include": [
+      "src/**/*.ts"
+  ]
 }
