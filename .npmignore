@@ -2,3 +2,6 @@
 src
 tsconfig.json
 jest.config.js
+.editorconfig
+.eslintrc.js
+.eslintignore
