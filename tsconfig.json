@@ -15,12 +15,18 @@
     "inlineSourceMap": true,
     "inlineSources": true,
 
+    "skipLibCheck": true,
     "types": [
+      "jest"
     ],
 
     "forceConsistentCasingInFileNames": true
   },
   "include": [
-      "src/**/*.ts"
+    "src/**/*.ts"
+  ],
+  "exclude": [
+    "node_modules",
+    "src/**/*.test.ts"
   ]
 }

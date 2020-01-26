@@ -22,7 +22,9 @@
   },
   "homepage": "https://github.com/yajamon/result.ts#readme",
   "devDependencies": {
-    "jest": "^25.1.0"
+    "@types/jest": "^24.9.1",
+    "jest": "^25.1.0",
+    "ts-jest": "^25.0.0"
   },
   "dependencies": {
     "typescript": "^3.7.5"
