@@ -1,6 +1,6 @@
 {
   "name": "@yajamon/result.ts",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Type definitions and simple functions inspired by Rust's Result.",
   "main": "lib/main.js",
   "scripts": {
