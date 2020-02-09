@@ -18,3 +18,10 @@ export const Err: <E>(error: E) => ResultErr<E> = e => ({
   isError: true,
   error: e
 });
+
+export const unwrap: <T, E>(result: Result<T, E>) => T = result => {
+  if (result.isError) {
+    throw result.error;
+  }
+  return result.value;
+};

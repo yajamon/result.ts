@@ -1,4 +1,4 @@
-import { Err, Ok, Result } from "./main";
+import { Err, Ok, Result, unwrap } from "./main";
 
 describe("Ok", () => {
   it("is return ResultOk", () => {
@@ -21,5 +21,18 @@ describe("Err", () => {
     } else {
       throw "Wrong!";
     }
+  });
+});
+
+describe("unwrap()", () => {
+  it("throw when ResultErr", () => {
+    expect(() => {
+      unwrap(Err("error"));
+    }).toThrow("error");
+  });
+
+  it("return value when ResultOk", () => {
+    const ok = Ok("success");
+    expect(unwrap(ok)).toBe("success");
   });
 });
