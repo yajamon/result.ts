@@ -30,4 +30,9 @@ describe("unwrap()", () => {
       unwrap(Err("error"));
     }).toThrow("error");
   });
+
+  it("return value when ResultOk", () => {
+    const ok = Ok("success");
+    expect(unwrap(ok)).toBe("success");
+  });
 });
