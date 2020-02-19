@@ -7,6 +7,22 @@ Type definitions and simple functions inspired by Rust's Result.
 npm i -D @yajamon/result.ts
 ```
 
+## Types
+
+```ts
+type ResultOk<T> = {
+  isError: false;
+  value: T;
+};
+
+type ResultErr<E> = {
+  isError: true;
+  error: E;
+};
+
+export type Result<T, E> = ResultOk<T> | ResultErr<E>;
+```
+
 ## Usage
 
 ```ts
