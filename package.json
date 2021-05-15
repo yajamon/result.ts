@@ -32,6 +32,5 @@
     "prettier": "^1.19.1",
     "ts-jest": "^25.5.1",
     "typescript": "^3.9.2"
-  },
-  "dependencies": {}
+  }
 }
