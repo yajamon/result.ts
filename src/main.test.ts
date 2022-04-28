@@ -1,4 +1,4 @@
-import { Err, Ok, Result, unwrap } from "./main";
+import { Err, Ok, ok, Result, unwrap } from "./main";
 
 describe("Ok", () => {
   it("is return ResultOk", () => {
@@ -18,6 +18,18 @@ describe("Err", () => {
     if (error.isError) {
       // isError を確認することで、スコープ内の型を ResultからResultErrに推定できる
       expect(error.error).toEqual("error");
+    } else {
+      throw "Wrong!";
+    }
+  });
+});
+
+describe("ok", () => {
+  it("is return ResultOk", () => {
+    const success = ok("success") as Result<string, never>;
+    if (success.isError === false) {
+      // isError を確認することで、スコープ内の型を ResultからResultOkに推定できる
+      expect(success.value).toEqual("success");
     } else {
       throw "Wrong!";
     }
