@@ -10,16 +10,16 @@ export type ResultErr<E> = {
 
 export type Result<T, E> = ResultOk<T> | ResultErr<E>;
 
-export const Ok: <T>(value: T) => ResultOk<T> = v => ({
+export const Ok: <T>(value: T) => ResultOk<T> = (v) => ({
   isError: false,
   value: v
 });
-export const Err: <E>(error: E) => ResultErr<E> = e => ({
+export const Err: <E>(error: E) => ResultErr<E> = (e) => ({
   isError: true,
   error: e
 });
 
-export const unwrap: <T, E>(result: Result<T, E>) => T = result => {
+export const unwrap: <T, E>(result: Result<T, E>) => T = (result) => {
   if (result.isError) {
     throw result.error;
   }
