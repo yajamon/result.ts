@@ -12,11 +12,11 @@ export type Result<T, E> = ResultOk<T> | ResultErr<E>;
 
 export const Ok: <T>(value: T) => ResultOk<T> = (v) => ({
   isError: false,
-  value: v
+  value: v,
 });
 export const Err: <E>(error: E) => ResultErr<E> = (e) => ({
   isError: true,
-  error: e
+  error: e,
 });
 
 export const unwrap: <T, E>(result: Result<T, E>) => T = (result) => {
