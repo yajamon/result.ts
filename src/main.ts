@@ -14,13 +14,15 @@ export const ok: <T>(value: T) => ResultOk<T> = (v) => ({
   isError: false,
   value: v,
 });
-export const Err: <E>(error: E) => ResultErr<E> = (e) => ({
+export const err: <E>(error: E) => ResultErr<E> = (e) => ({
   isError: true,
   error: e,
 });
 
 /** @deprecated Use `ok(result: T)` instead */
 export const Ok = ok;
+/** @deprecated Use `err(error: E)` instead */
+export const Err = err;
 
 export const unwrap: <T, E>(result: Result<T, E>) => T = (result) => {
   if (result.isError) {
