@@ -26,16 +26,16 @@ export type Result<T, E> = ResultOk<T> | ResultErr<E>;
 ## Usage
 
 ```ts
-import { Result, Ok, Err } from "@yajamon/result.ts"
+import { Result, ok, err } from "@yajamon/result.ts"
 
 class Foo {
   static create(input:string): Result<Foo, Error> {
     if (validation(input)) {
       const foo = new Foo();
       // ...
-      return Ok(foo);
+      return ok(foo);
     } else {
-      return Err(new Error("error message"));
+      return err(new Error("error message"));
     }
   }
 
